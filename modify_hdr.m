@@ -1,0 +1,10 @@
+function nii_struct_new = modify_hdr(nii_struct, nii_ref)
+hdr = nii_ref.hdr;
+hdr.dime.datatype = nii_struct.hdr.dime.datatype;
+hdr.dime.bitpix = nii_struct.hdr.dime.bitpix;
+hdr.dime.cal_max = nii_struct.hdr.dime.cal_max;
+hdr.dime.cal_min = nii_struct.hdr.dime.cal_min;
+hdr.dime.glmax = nii_struct.hdr.dime.glmax;
+hdr.dime.glmin = nii_struct.hdr.dime.glmin;
+nii_struct_new = nii_struct;
+nii_struct_new.hdr = hdr;
